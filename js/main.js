@@ -129,7 +129,7 @@
       follower.style.transform = "translate(" + followerX + "px," + followerY + "px)";
       requestAnimationFrame(loop);
     })();
-    var interactives = document.querySelectorAll("a, button, input, textarea, .product-card, .pillar, .vm-card, .service-card");
+    var interactives = document.querySelectorAll("a, button, input, textarea, .product-card, .pillar, .vm-card, .service-card, .ab-vm-card, .ab-services-card, .ab-value-item, .ab-leader__photo-wrap, .ab-cert-img-wrap");
     interactives.forEach(function (el) {
       el.addEventListener("mouseenter", function () {
         cursor.classList.add("is-hovering");
@@ -193,6 +193,10 @@
   addTilt(".vm-card");
   addTilt(".service-card");
   addTilt(".hero-stat");
+  addTilt(".ab-vm-card");
+  addTilt(".ab-services-card");
+  addTilt(".ab-leader__photo-wrap");
+  addTilt(".ab-cert-img-wrap");
 
   /* ── Particle Canvas ── */
   var canvas = document.getElementById("particle-canvas");
