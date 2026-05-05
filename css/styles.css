@@ -2485,6 +2485,11 @@ h2 {
   -webkit-appearance: none;
 }
 
+.form-group option {
+  background-color: #0d1117;
+  color: #fff;
+}
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: rgba(160, 170, 178, 0.5);
