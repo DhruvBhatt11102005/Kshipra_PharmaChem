@@ -217,7 +217,8 @@
   position: relative;
   z-index: 2;
   padding: 3rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85));
+  height: 100%;
   min-height: 450px;
   display: flex;
   flex-direction: column;
