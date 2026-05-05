@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kshipra Pharma-Chem LLP | Premium Supply</title>
+    <meta
+      name="description"
+      content="High-purity pharmaceutical and specialty chemical materials with premium quality assurance and reliable global supply."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Background Effects -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="logo-link" href="#top" aria-label="Kshipra Pharma-Chem home">
+          <img src="Kshipra.png" alt="Kshipra Pharma-Chem LLP" />
+        </a>
+        <nav class="nav-actions" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#dual">Divisions</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Enquire Now</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobile-nav">
+      <a href="#dual">Divisions</a>
+      <a href="products.html">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+      <section class="hero container reveal">
+        <p class="hero-badge"><span class="dot" aria-hidden="true"></span> Quality · Safety · Compliance</p>
+        <h1><span class="grad">Global supply</span> for pharmaceutical &amp; <span class="grad-chem">specialty chemistry</span></h1>
+        <p class="hero-lead">
+          We partner with healthcare, life-sciences, research, and industry worldwide — delivering defined specifications,
+          rigorous documentation, and dependable logistics.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#dual">Explore divisions</a>
+          <a class="btn btn-ghost" href="#contact">Talk to our team</a>
+        </div>
+        
+        <div class="hero-stats" role="presentation">
+          <div class="hero-stat">
+            <strong>GMP-minded</strong>
+            <span>QA systems &amp; batch traceability</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Global Reach</strong>
+            <span>Sourcing &amp; coordinated supply</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Documented</strong>
+            <span>COA, MSDS &amp; regulatory support</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dual-section container reveal" id="dual">
+        <p class="section-label">Two focused streams</p>
+        <h2>Comprehensive Pharmaceutical and Chemical Expertise</h2>
+
+        <div class="pillars reveal-stagger">
+          <article class="pillar pillar--pharma">
+            <img src="images/pharma_division.png" alt="Pharmaceutical Division" class="pillar-image" />
+            <div class="pillar-content">
+              <span class="pillar-tag">Division · Pharma</span>
+              <h3>Pharmaceutical supply</h3>
+              <p>
+                APIs, intermediates, and pharma-grade inputs with emphasis on specification control, validated partners, and audit-ready
+                documentation for regulated markets.
+              </p>
+              <ul class="pillar-list">
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  Specifications aligned to pharmacopoeia &amp; customer needs
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  COA, stability context, and change-control aware supply
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  Support for qualification, samples, and technical clarifications
+                </li>
+              </ul>
+              <a class="pillar-link" href="#contact" style="margin-top: auto;">Pharma enquiries <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="pillar pillar--chem">
+            <img src="images/chem_division.png" alt="Chemical Division" class="pillar-image" />
+            <div class="pillar-content">
+              <span class="pillar-tag">Division · Chemical</span>
+              <h3>Specialty &amp; industrial chemistry</h3>
+              <p>
+                High-purity and application-driven chemicals for R&amp;D, manufacturing, and industrial processes — with hazard-aware
+                handling and secure packaging options.
+              </p>
+              <ul class="pillar-list">
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  Sourcing mapped to grade, purity, and end-use requirements
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  MSDS, labeling, and transport considerations coordinated
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  Bulk, scheduled, and project-based supply models
+                </li>
+              </ul>
+              <a class="pillar-link" href="#contact" style="margin-top: auto;">Chemical enquiries <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="trust-strip reveal">
+        <div class="container">
+          <h3>What every shipment is built on</h3>
+          <div class="marquee-container">
+            <div class="marquee-content">
+              <!-- First Set -->
+              <span class="trust-chip">Defined specifications</span>
+              <span class="trust-chip">Batch traceability</span>
+              <span class="trust-chip">Regulatory documentation</span>
+              <span class="trust-chip">Validated sourcing</span>
+              <span class="trust-chip">Secure packaging</span>
+              <span class="trust-chip">Controlled logistics</span>
+              <!-- Second Set for seamless loop -->
+              <span class="trust-chip">Defined specifications</span>
+              <span class="trust-chip">Batch traceability</span>
+              <span class="trust-chip">Regulatory documentation</span>
+              <span class="trust-chip">Validated sourcing</span>
+              <span class="trust-chip">Secure packaging</span>
+              <span class="trust-chip">Controlled logistics</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-choose container reveal" id="why-choose">
+        <div class="why-grid">
+          <div class="why-image-wrapper">
+            <img src="images/pharma_division.png" alt="Trusted Expertise" class="why-image" />
+          </div>
+          <div class="why-content">
+            <p class="section-label">Why Choose Us</p>
+            <h2>Trusted Pharmaceutical &amp; Chemical Expertise Built on Quality</h2>
+            <p class="why-lead">We ensure every supply is backed by:</p>
+            <div class="progress-bars">
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span>Defined specifications &amp; batch traceability</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span>COA, MSDS, and regulatory documentation</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span>Validated sourcing &amp; compliant manufacturing partners</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span>Secure packaging &amp; controlled logistics</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span>Customer-focused supply coordination</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-block container reveal" id="services">
+        <div class="services-header text-center">
+          <h2>Pharmaceutical &amp; Chemical Solutions Built on Precision</h2>
+          <p class="services-lead">Delivering high-quality pharmaceutical and specialty chemical services with a strong focus on compliance, consistency, and long-term partnerships.</p>
+        </div>
+        <div class="services-grid">
+          <div class="services-main-card">
+            <div class="services-bg-image" style="background-image: url('images/hero_bg.png');"></div>
+            <div class="services-main-content">
+              <h3>Professional Pharmaceutical &amp; Chemical Operations</h3>
+              <ul class="services-contact-list">
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <div>
+                    <strong>Supply &amp; Operations</strong>
+                    <span>Regulated facilities with global supply capabilities</span>
+                  </div>
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                  <div>
+                    <strong>Business Support</strong>
+                    <span>+91 9274749700</span>
+                  </div>
+                </li>
+                <li>
+                  <svg width="24" height="24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                  <div>
+                    <strong>Email</strong>
+                    <span>info@kshiprapharmachem.in</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="services-sub-cards reveal-stagger">
+            <div class="service-card">
+              <div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3>Quality Assurance &amp; Regulatory Compliance</h3>
+              <p>Comprehensive quality systems ensuring pharmaceutical-grade consistency, regulatory compliance, and full documentation support including COA, MSDS, and validation records.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+              <h3>Global Supply &amp; Logistics Management</h3>
+              <p>Reliable sourcing, packaging, and distribution of pharmaceutical and specialty chemicals with controlled handling, traceability, and on-time global delivery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faqs-block container reveal" id="faqs">
+        <div class="text-center" style="margin-bottom: 3rem;">
+          <p class="section-label" style="text-align: center;">FAQs</p>
+          <h2 style="margin: 0 auto; text-align: center;">Frequently Asked Questions</h2>
+          <p class="faqs-lead" style="text-align: center; max-width: 700px; margin: 1rem auto 0; color: var(--text-muted);">Answers to common questions about our pharmaceutical and chemical products, quality standards, compliance, and supply capabilities.</p>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>01</span> What types of pharmaceutical and chemical products do you supply?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>We supply pharmaceutical-grade chemicals, APIs, intermediates, and specialty chemicals used across healthcare, life sciences, and industrial applications. Product availability may vary by regulatory and market requirements.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>02</span> Do your products comply with international quality standards?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>Yes, our pharmaceutical division focuses on compendial compliance (USP, EP, BP) and strict QA parameters, backed by rigorous supplier validation and proper documentation.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>03</span> How are pharmaceutical chemicals stored and handled?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>All materials are handled under GMP-aligned conditions with temperature controls where applicable, ensuring product integrity from sourcing to final delivery.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>04</span> Do you provide regulatory and technical documentation?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>Absolutely. We provide full documentation including COAs, MSDS, TSE/BSE statements, and regulatory support necessary for compliance and seamless filing.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>05</span> Do you support custom orders or bulk supply?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>Yes, we cater to varying scale requirements, from laboratory/R&amp;D quantities to commercial bulk supply, adapting our logistics to fit your schedule.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title"><span>06</span> How can I request product information or place an enquiry?</span>
+              <svg class="accordion-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <p>You can use the contact form on this website, email us directly with your specifications and target quantities, or call our support lines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-block container reveal" id="about">
+        <p class="section-label">Who we are</p>
+        <h2>Vision &amp; mission</h2>
+        <div class="vm-grid reveal-stagger">
+          <div class="vm-card">
+            <h3>Our vision</h3>
+            <p>
+              Supporting healthcare, life-sciences, research, and industrial applications with consistent performance and long-term
+              partnerships across regions. We aim to be the standard in purity and precision.
+            </p>
+          </div>
+          <div class="vm-card">
+            <h3>Our mission</h3>
+            <p>
+              Deliver high-purity pharmaceutical and specialty chemical materials with a strong focus on quality assurance, documentation
+              integrity, and reliable global supply to advance global science.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container reveal" id="contact">
+        <div class="cta-banner">
+          <h2>Ready to scale supply internationally?</h2>
+          <p>Share your product, grade, volume, and destination — our team will respond with documentation and next steps.</p>
+          <a class="btn btn-primary" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%20from%20website">Email info@kshiprapharmachem.in</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Kshipra.png" alt="Kshipra Pharma-Chem LLP" />
+            <p>Pharmaceutical &amp; specialty chemical supply with quality systems and documentation you can stand behind.</p>
+          </div>
+          <dl class="footer-contact">
+            <dt>Phone</dt>
+            <dd><a href="tel:+919274749700">+91 92747 49700</a></dd>
+            <dd><a href="tel:+917945949641">07945 949641</a></dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:info@kshiprapharmachem.in">info@kshiprapharmachem.in</a></dd>
+          </dl>
+        </div>
+        <p class="footer-copy">© 2026 Kshipra Pharma-Chem LLP · All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products · Kshipra Pharma-Chem LLP</title>
+    <meta
+      name="description"
+      content="Explore Kshipra pharmaceutical and specialty chemical product lines — filter by division, category, or search."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="logo-link" href="index.html" aria-label="Kshipra Pharma-Chem home">
+          <img src="Kshipra.png" alt="Kshipra Pharma-Chem LLP" />
+        </a>
+        <nav class="nav-actions" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="is-active">Products</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:info@kshiprapharmachem.in?subject=Product%20enquiry">Enquire</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="is-active">Products</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <main>
+      <section class="page-hero container reveal">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Products</span>
+        </nav>
+        <p class="hero-badge"><span class="dot" aria-hidden="true"></span> Catalogue overview</p>
+        <h1 class="page-hero-title"><span class="grad">Pharma</span> &amp; <span class="grad-chem">chemical</span> lines</h1>
+        <p class="page-hero-lead">
+          Two catalogues, one quality bar. Switch division, narrow by category, or search — then request COA-led documentation and supply
+          options for your market.
+        </p>
+      </section>
+
+      <section class="products-shell container">
+        <div class="products-toolbar reveal">
+          <div class="products-toolbar-top">
+            <p class="section-label" style="margin: 0;">Division</p>
+            <div class="division-switch" role="tablist">
+              <button type="button" class="division-switch__btn is-active" role="tab" aria-selected="true" id="tab-pharma" data-division="pharma">
+                <span class="division-switch__mark division-switch__mark--pharma" aria-hidden="true"></span>
+                Pharmaceutical
+              </button>
+              <button type="button" class="division-switch__btn" role="tab" aria-selected="false" id="tab-chem" data-division="chem">
+                <span class="division-switch__mark division-switch__mark--chem" aria-hidden="true"></span>
+                Chemical
+              </button>
+            </div>
+          </div>
+
+          <div class="products-filters">
+            <label class="search-field">
+              <span class="visually-hidden">Search products</span>
+              <svg class="search-field__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="9" cy="9" r="6" />
+                <path d="M13.5 13.5L18 18" />
+              </svg>
+              <input type="search" id="product-search" class="search-field__input" placeholder="Search name, grade, or application…" autocomplete="off" spellcheck="false" />
+            </label>
+
+            <div class="filter-chips-wrap">
+              <span class="filter-chips-label" id="filter-chips-label">Category</span>
+              <div class="filter-chips" id="filter-chips" role="group" aria-labelledby="filter-chips-label"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="products-count" id="products-count" aria-live="polite"></p>
+
+        <div class="product-grid reveal" id="product-grid">
+          <!-- Pharma -->
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="ibuprofen usp nf anti-inflammatory api oral solid dose">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">API</span>
+            <h3 class="product-card__title">Ibuprofen USP / NF</h3>
+            <p class="product-card__desc">Oral-grade API with pharmacopoeial alignment; batch COA, DMF support subject to partner program.</p>
+            <ul class="product-card__tags"><li>Oral SOLID</li><li>COA</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Ibuprofen">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="paracetamol acetaminophen bp ep api analgesic">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">API</span>
+            <h3 class="product-card__title">Paracetamol BP / EP</h3>
+            <p class="product-card__desc">Widely specified analgesic API; documentation package for regulated filings on request.</p>
+            <ul class="product-card__tags"><li>Multicompendial</li><li>Traceability</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Paracetamol">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="omeprazole proton pump inhibitor api gastro">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">API</span>
+            <h3 class="product-card__title">Omeprazole BP</h3>
+            <p class="product-card__desc">Gastro therapeutic API with controlled impurity discussion and stability context available.</p>
+            <ul class="product-card__tags"><li>Spec control</li><li>Partner QA</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Omeprazole">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="intermediate" data-search="cefixime intermediate cephalosporin synthesis">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">Intermediate</span>
+            <h3 class="product-card__title">Cefixime synthetic intermediates</h3>
+            <p class="product-card__desc">Supply of key stages for cephalosporin routes — purity windows agreed per project.</p>
+            <ul class="product-card__tags"><li>Custom stage</li><li>Project basis</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Cefixime%20intermediates">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="excipient" data-search="hpmc hypromellose 2910 tablet film coat excipient">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">Excipient</span>
+            <h3 class="product-card__title">HPMC 2910</h3>
+            <p class="product-card__desc">Film coating and matrix applications; pharmacopoeial grades with TSE/BSE statements.</p>
+            <ul class="product-card__tags"><li>Coating</li><li>Compliance pack</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20HPMC%202910">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="excipient" data-search="lactose monohydrate tablet diluent excipient">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">Excipient</span>
+            <h3 class="product-card__title">Lactose monohydrate</h3>
+            <p class="product-card__desc">Direct compression and wet granulation grades; microbial and particle controls.</p>
+            <ul class="product-card__tags"><li>Flows</li><li>DMF pathway</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Lactose">Request documentation</a>
+          </article>
+
+          <!-- Chemical -->
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-search="acetone hplc solvent chromatography">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Solvent</span>
+            <h3 class="product-card__title">Acetone — HPLC</h3>
+            <p class="product-card__desc">Low UV absorbance solvent for LC workflows; amber packaging options available.</p>
+            <ul class="product-card__tags"><li>LAB / QC</li><li>MSDS</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Acetone%20HPLC">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-search="methanol acs solvent">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Solvent</span>
+            <h3 class="product-card__title">Methanol — ACS</h3>
+            <p class="product-card__desc">General-purpose and analytical methanol grades with hazardous handling advisory pack.</p>
+            <ul class="product-card__tags"><li>BULK</li><li>ADR aware</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Methanol%20ACS">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="acid" data-search="hydrochloric acid 37 percent acs">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Acid</span>
+            <h3 class="product-card__title">Hydrochloric acid ~37%</h3>
+            <p class="product-card__desc">Corrosive mineral acid with compliant labeling and segregation guidance for storage.</p>
+            <ul class="product-card__tags"><li>Corrosive</li><li>GHS kit</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Hydrochloric%20acid">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="base" data-search="sodium hydroxide pearls caustic soda">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Base</span>
+            <h3 class="product-card__title">Sodium hydroxide — pearls</h3>
+            <p class="product-card__desc">Caustic soda in free-flowing pearl form for process neutralization and cleaning cycles.</p>
+            <ul class="product-card__tags"><li>Process</li><li>Palletized</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Sodium%20hydroxide">Request documentation</a>
+          </article>
+        </div>
+
+        <div class="product-empty" id="product-empty" hidden>
+          <p class="product-empty__title">No matches in this view</p>
+          <p class="product-empty__text">Try another category, switch division, or clear your search — our team can also source off-catalog.</p>
+          <button type="button" class="btn btn-ghost" id="product-reset">Reset filters</button>
+        </div>
+      </section>
+
+      <section class="container reveal">
+        <div class="cta-banner" style="margin-bottom: 4rem;">
+          <h2>Need a product not listed?</h2>
+          <p>Send specifications, pharmacopoeia reference, or CAS — we coordinate technical matching and documentation.</p>
+          <a class="btn btn-primary" href="mailto:info@kshiprapharmachem.in?subject=Custom%20product%20enquiry">Email info@kshiprapharmachem.in</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Kshipra.png" alt="Kshipra Pharma-Chem LLP" />
+            <p>Pharmaceutical &amp; specialty chemical supply with quality systems and documentation you can stand behind.</p>
+          </div>
+          <dl class="footer-contact">
+            <dt>Phone</dt>
+            <dd><a href="tel:+919274749700">+91 92747 49700</a></dd>
+            <dd><a href="tel:+917945949641">07945 949641</a></dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:info@kshiprapharmachem.in">info@kshiprapharmachem.in</a></dd>
+          </dl>
+        </div>
+        <p class="footer-copy">© 2026 Kshipra Pharma-Chem LLP · All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="product-modal">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="modal-header">
+          <span class="modal-pill" id="modal-category">API</span>
+          <h3 id="modal-title">Product Name</h3>
+          <p id="modal-desc" style="color: var(--text-muted);">Product description goes here.</p>
+        </div>
+        <div class="modal-stats">
+          <div class="modal-stat-item">
+            <span>CAS Number</span>
+            <strong id="modal-cas">123-45-6</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Formula</span>
+            <strong id="modal-formula">C8H9NO2</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Compliance</span>
+            <strong id="modal-compliance">USP/EP</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Availability</span>
+            <strong id="modal-availability">Commercial Bulk</strong>
+          </div>
+        </div>
+        <form class="modal-form" id="modal-enquiry-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Tell us your quantity requirements and destination..." rows="3" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
