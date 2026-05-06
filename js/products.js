@@ -25,9 +25,34 @@
     ],
   };
 
+  var SUBCATEGORIES = {
+    pharma: [
+      { id: "all", label: "All Sub-Categories" },
+      { id: "nsaids", label: "NSAIDs" },
+      { id: "analgesic", label: "Analgesic" },
+      { id: "gastrointestinal", label: "Gastrointestinal" },
+      { id: "antibiotic-intermediate", label: "Antibiotic Intermediates" },
+      { id: "binder-coating", label: "Binders & Coatings" },
+      { id: "diluent", label: "Diluents" },
+      { id: "herbal-extract", label: "Herbal Extracts" },
+      { id: "nutraceutical", label: "Nutraceuticals" },
+    ],
+    chem: [
+      { id: "all", label: "All Sub-Categories" },
+      { id: "analytical-solvent", label: "Analytical Solvents" },
+      { id: "industrial-solvent", label: "Industrial Solvents" },
+      { id: "mineral-acid", label: "Mineral Acids" },
+      { id: "alkali-base", label: "Alkali Bases" },
+      { id: "sulphur-product", label: "Sulphur Products" },
+      { id: "pigment", label: "Pigments" },
+      { id: "industrial-chemical", label: "Industrial Chemicals" },
+    ],
+  };
+
   var state = {
     division: "pharma",
     category: "all",
+    subcategory: "all",
     query: "",
   };
 
@@ -78,6 +103,8 @@
     if (card.getAttribute("data-division") !== state.division) return false;
     var cat = card.getAttribute("data-category");
     if (state.category !== "all" && cat !== state.category) return false;
+    var subcat = card.getAttribute("data-subcategory");
+    if (state.subcategory !== "all" && subcat !== state.subcategory) return false;
     var q = normalize(state.query);
     if (!q) return true;
     var hay = normalize(card.getAttribute("data-search")) + " " + normalize(card.textContent);
@@ -128,6 +155,7 @@
   function setDivision(div) {
     state.division = div;
     state.category = "all";
+    state.subcategory = "all";
     if (searchInput) state.query = searchInput.value;
     buildChips();
     syncTabs();
@@ -136,6 +164,7 @@
 
   function setCategory(cat) {
     state.category = cat;
+    state.subcategory = "all";
     if (!chipsWrap) return;
     var chips = chipsWrap.querySelectorAll(".filter-chip");
     chips.forEach(function (c) {
@@ -149,6 +178,7 @@
 
   function resetAll() {
     state.category = "all";
+    state.subcategory = "all";
     state.query = "";
     if (searchInput) searchInput.value = "";
     buildChips();
@@ -188,6 +218,81 @@
     });
   }
 
+  // Drawer Logic
+  var subcatOpenBtn = document.getElementById("subcat-open");
+  var subcatDrawer = document.getElementById("subcat-drawer");
+  var subcatOverlay = document.getElementById("subcat-overlay");
+  var subcatCloseBtn = document.getElementById("subcat-close");
+  var subcatList = document.getElementById("subcat-list");
+  var subcatClearBtn = document.getElementById("subcat-clear");
+
+  function buildSubcategories() {
+    if (!subcatList) return;
+    subcatList.innerHTML = "";
+    var defs = SUBCATEGORIES[state.division] || SUBCATEGORIES.pharma;
+    defs.forEach(function(def) {
+      var item = document.createElement("label");
+      item.className = "subcat-item";
+      
+      var input = document.createElement("input");
+      input.type = "radio";
+      input.name = "subcat-filter";
+      input.value = def.id;
+      if (def.id === state.subcategory) {
+        input.checked = true;
+      }
+      
+      input.addEventListener("change", function() {
+        if (input.checked) {
+          state.subcategory = input.value;
+          // If a specific sub-category is picked, reset the main category to 'all'
+          // to avoid "no results" conflicts.
+          if (state.subcategory !== "all") {
+            state.category = "all";
+            buildChips(); 
+          }
+          applyFilter();
+          
+          // Auto-close drawer after a short delay for better UX
+          setTimeout(closeDrawer, 400);
+        }
+      });
+
+      var span = document.createElement("span");
+      span.textContent = def.label;
+
+      item.appendChild(input);
+      item.appendChild(span);
+      subcatList.appendChild(item);
+    });
+  }
+
+  function openDrawer() {
+    if (!subcatDrawer) return;
+    buildSubcategories();
+    subcatDrawer.classList.add("is-active");
+    subcatOverlay.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeDrawer() {
+    if (!subcatDrawer) return;
+    subcatDrawer.classList.remove("is-active");
+    subcatOverlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  if (subcatOpenBtn) subcatOpenBtn.addEventListener("click", openDrawer);
+  if (subcatCloseBtn) subcatCloseBtn.addEventListener("click", closeDrawer);
+  if (subcatOverlay) subcatOverlay.addEventListener("click", closeDrawer);
+  if (subcatClearBtn) {
+    subcatClearBtn.addEventListener("click", function() {
+      state.subcategory = "all";
+      buildSubcategories();
+      applyFilter();
+    });
+  }
+
   // Product Modal Logic
   var modal = document.getElementById("product-modal");
   var closeBtn = document.querySelector(".modal-close");
@@ -216,10 +321,19 @@
         modalCategory.style.color = div === "pharma" ? "var(--accent-pharma)" : "var(--accent-chem)";
         modalCategory.style.background = div === "pharma" ? "rgba(0, 210, 255, 0.1)" : "rgba(0, 255, 135, 0.1)";
 
-        // Generate fake stats based on hash of title for demo purposes
-        var hash = 0;
-        for (var i = 0; i < title.length; i++) hash = title.charCodeAt(i) + ((hash << 5) - hash);
-        document.getElementById("modal-cas").textContent = Math.abs(hash).toString().substring(0, 3) + "-" + Math.abs(hash).toString().substring(3, 5) + "-" + (Math.abs(hash) % 9);
+        var cas = card.getAttribute("data-cas") || "N/A";
+        var formula = card.getAttribute("data-formula") || "N/A";
+        var compliance = card.getAttribute("data-compliance") || "N/A";
+        var purity = card.getAttribute("data-purity") || "N/A";
+        var appearance = card.getAttribute("data-appearance") || "N/A";
+        var storage = card.getAttribute("data-storage") || "N/A";
+
+        document.getElementById("modal-cas").textContent = cas;
+        document.getElementById("modal-formula").textContent = formula;
+        document.getElementById("modal-compliance").textContent = compliance;
+        document.getElementById("modal-purity").textContent = purity;
+        document.getElementById("modal-appearance").textContent = appearance;
+        document.getElementById("modal-storage").textContent = storage;
         
         modal.classList.add("is-active");
       }

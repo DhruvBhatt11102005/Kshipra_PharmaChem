@@ -96,6 +96,10 @@
             <div class="filter-chips-wrap">
               <span class="filter-chips-label" id="filter-chips-label">Category</span>
               <div class="filter-chips" id="filter-chips" role="group" aria-labelledby="filter-chips-label"></div>
+              <button type="button" class="btn btn-ghost subcat-btn" id="subcat-open" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-left: auto;">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:0.4rem"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+                Sub-Categories
+              </button>
             </div>
           </div>
         </div>
@@ -104,7 +108,7 @@
 
         <div class="product-grid reveal" id="product-grid">
           <!-- Pharma -->
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="ibuprofen usp nf anti-inflammatory api oral solid dose">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="nsaids" data-search="ibuprofen usp nf anti-inflammatory api oral solid dose" data-cas="15687-27-1" data-formula="C13H18O2" data-purity=">= 99%" data-appearance="White powder" data-storage="Room Temp" data-compliance="USP/NF">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">API</span>
             <h3 class="product-card__title">Ibuprofen USP / NF</h3>
@@ -113,7 +117,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Ibuprofen">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="paracetamol acetaminophen bp ep api analgesic">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="analgesic" data-search="paracetamol acetaminophen bp ep api analgesic" data-cas="103-90-2" data-formula="C8H9NO2" data-purity=">= 99%" data-appearance="White crystalline" data-storage="Room Temp" data-compliance="BP/EP/USP">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">API</span>
             <h3 class="product-card__title">Paracetamol BP / EP</h3>
@@ -122,7 +126,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Paracetamol">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-search="omeprazole proton pump inhibitor api gastro">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="gastrointestinal" data-search="omeprazole proton pump inhibitor api gastro" data-cas="73590-58-6" data-formula="C17H19N3O3S" data-purity=">= 99%" data-appearance="White powder" data-storage="Room Temp" data-compliance="BP">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">API</span>
             <h3 class="product-card__title">Omeprazole BP</h3>
@@ -131,7 +135,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Omeprazole">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="intermediate" data-search="cefixime intermediate cephalosporin synthesis">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="intermediate" data-subcategory="antibiotic-intermediate" data-search="cefixime intermediate cephalosporin synthesis" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">Intermediate</span>
             <h3 class="product-card__title">Cefixime synthetic intermediates</h3>
@@ -140,7 +144,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Cefixime%20intermediates">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="excipient" data-search="hpmc hypromellose 2910 tablet film coat excipient">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="excipient" data-subcategory="binder-coating" data-search="hpmc hypromellose 2910 tablet film coat excipient" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">Excipient</span>
             <h3 class="product-card__title">HPMC 2910</h3>
@@ -149,7 +153,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20HPMC%202910">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--pharma" data-division="pharma" data-category="excipient" data-search="lactose monohydrate tablet diluent excipient">
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="diluent" data-search="lactose monohydrate tablet diluent excipient" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
             <span class="product-card__kind">Pharma</span>
             <span class="product-card__pill">Excipient</span>
             <h3 class="product-card__title">Lactose monohydrate</h3>
@@ -158,8 +162,26 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Lactose">Request documentation</a>
           </article>
 
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="herbal-extract" data-search="ginseng extract panax herbal biotech" data-cas="90045-38-8" data-formula="Complex" data-purity="Standardized Extract" data-appearance="Brown powder" data-storage="Cool, dry place" data-compliance="Nutraceutical">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">Biotech</span>
+            <h3 class="product-card__title">Ginseng Extract</h3>
+            <p class="product-card__desc">Standardized Panax Ginseng extract with high ginsenoside content for nutraceutical use.</p>
+            <ul class="product-card__tags"><li>Herbal</li><li>Natural</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Ginseng%20Extract">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--pharma" data-division="pharma" data-category="api" data-subcategory="nutraceutical" data-search="curcumin 95 percent turmeric extract nutraceutical" data-cas="458-37-7" data-formula="C21H20O6" data-purity=">= 95%" data-appearance="Yellow-orange powder" data-storage="Protect from light" data-compliance="Food/Pharma">
+            <span class="product-card__kind">Pharma</span>
+            <span class="product-card__pill">Nutra</span>
+            <h3 class="product-card__title">Curcumin 95%</h3>
+            <p class="product-card__desc">High-purity turmeric extract for health supplements; tested for heavy metals and solvent residues.</p>
+            <ul class="product-card__tags"><li>Biotech</li><li>95% Purity</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Curcumin%2095%25">Request documentation</a>
+          </article>
+
           <!-- Chemical -->
-          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-search="acetone hplc solvent chromatography">
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-subcategory="analytical-solvent" data-search="acetone hplc solvent chromatography" data-cas="67-64-1" data-formula="C3H6O" data-purity="HPLC Grade" data-appearance="Clear liquid" data-storage="Flammable cabinet" data-compliance="ACS">
             <span class="product-card__kind">Chemical</span>
             <span class="product-card__pill product-card__pill--chem">Solvent</span>
             <h3 class="product-card__title">Acetone — HPLC</h3>
@@ -168,7 +190,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Acetone%20HPLC">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-search="methanol acs solvent">
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-subcategory="industrial-solvent" data-search="methanol acs solvent" data-cas="67-56-1" data-formula="CH3OH" data-purity="ACS Grade" data-appearance="Clear liquid" data-storage="Flammable cabinet" data-compliance="ACS">
             <span class="product-card__kind">Chemical</span>
             <span class="product-card__pill product-card__pill--chem">Solvent</span>
             <h3 class="product-card__title">Methanol — ACS</h3>
@@ -177,7 +199,7 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Methanol%20ACS">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--chem" data-division="chem" data-category="acid" data-search="hydrochloric acid 37 percent acs">
+          <article class="product-card product-card--chem" data-division="chem" data-category="acid" data-subcategory="mineral-acid" data-search="hydrochloric acid 37 percent acs" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
             <span class="product-card__kind">Chemical</span>
             <span class="product-card__pill product-card__pill--chem">Acid</span>
             <h3 class="product-card__title">Hydrochloric acid ~37%</h3>
@@ -186,13 +208,103 @@
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Hydrochloric%20acid">Request documentation</a>
           </article>
 
-          <article class="product-card product-card--chem" data-division="chem" data-category="base" data-search="sodium hydroxide pearls caustic soda">
+          <article class="product-card product-card--chem" data-division="chem" data-category="base" data-subcategory="alkali-base" data-search="sodium hydroxide pearls caustic soda" data-cas="1310-73-2" data-formula="NaOH" data-purity="99%" data-appearance="White pearls" data-storage="Dry, sealed" data-compliance="Industrial">
             <span class="product-card__kind">Chemical</span>
             <span class="product-card__pill product-card__pill--chem">Base</span>
             <h3 class="product-card__title">Sodium hydroxide — pearls</h3>
             <p class="product-card__desc">Caustic soda in free-flowing pearl form for process neutralization and cleaning cycles.</p>
             <ul class="product-card__tags"><li>Process</li><li>Palletized</li></ul>
             <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Sodium%20hydroxide">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="sulphur-product" data-search="sulphur powder 325 mesh granules lumps" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Specialty</span>
+            <h3 class="product-card__title">Sulphur Powder (325 Mesh)</h3>
+            <p class="product-card__desc">High-purity sulphur available in powder, granules, and lumps for industrial applications.</p>
+            <ul class="product-card__tags"><li>Industrial</li><li>Traceable</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Sulphur%20Powder">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-subcategory="industrial-solvent" data-search="methylene di chloride mdc solvent industrial" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Solvent</span>
+            <h3 class="product-card__title">Methylene Di Chloride (MDC)</h3>
+            <p class="product-card__desc">Powerful industrial solvent for pharmaceutical processing and metal cleaning.</p>
+            <ul class="product-card__tags"><li>Bulk</li><li>Process</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20MDC">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-subcategory="industrial-solvent" data-search="di methyl formamide dmf solvent" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Solvent</span>
+            <h3 class="product-card__title">Di Methyl Formamide (DMF)</h3>
+            <p class="product-card__desc">Versatile polar aprotic solvent widely used in chemical reactions and pharmaceutical synthesis.</p>
+            <ul class="product-card__tags"><li>Pure</li><li>Synthesis</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20DMF">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="industrial-chemical" data-search="liquid bromine corrosive industrial" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Specialty</span>
+            <h3 class="product-card__title">Liquid Bromine</h3>
+            <p class="product-card__desc">High-purity liquid bromine for chemical intermediates and flame retardants.</p>
+            <ul class="product-card__tags"><li>UN2789</li><li>Corrosive</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Bromine">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="pigment" data-search="alpha beta blue pigment green pigment" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Pigment</span>
+            <h3 class="product-card__title">Alpha Beta Blue Pigment</h3>
+            <p class="product-card__desc">Stable organic pigment for ink, coating, and plastic industries; excellent light fastness.</p>
+            <ul class="product-card__tags"><li>Color</li><li>Stable</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Pigments">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="acid" data-subcategory="mineral-acid" data-search="sulfuric acid h2so4 industrial" data-cas="7664-93-9" data-formula="H2SO4" data-purity="98%" data-appearance="Clear oily liquid" data-storage="Corrosives cabinet" data-compliance="Industrial">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Acid</span>
+            <h3 class="product-card__title">Sulfuric Acid (H₂SO₄)</h3>
+            <p class="product-card__desc">Industrial grade sulfuric acid for various processing and neutralization requirements.</p>
+            <ul class="product-card__tags"><li>Bulk</li><li>Heavy</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Sulfuric%20Acid">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="solvent" data-subcategory="industrial-solvent" data-search="formaldehyde 37 percent formalin solvent" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Solvent</span>
+            <h3 class="product-card__title">Formaldehyde (37%)</h3>
+            <p class="product-card__desc">Standard aqueous solution (formalin) for preservation, disinfection, and chemical synthesis.</p>
+            <ul class="product-card__tags"><li>Process</li><li>Stabilized</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Formaldehyde">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="industrial-chemical" data-search="triethylamine tea chemical intermediate" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Specialty</span>
+            <h3 class="product-card__title">Triethylamine (TEA)</h3>
+            <p class="product-card__desc">Organic base used in the synthesis of esters, amides, and as a catalyst in chemical reactions.</p>
+            <ul class="product-card__tags"><li>Base</li><li>Catalyst</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Triethylamine">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="industrial-chemical" data-search="napthol sulphonic acid sodium salt dyes" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Specialty</span>
+            <h3 class="product-card__title">Naphol Sulphonic Acid Salts</h3>
+            <p class="product-card__desc">Key intermediates for the manufacture of dyes and pigments; available in 1,5 and 5 sodium salt forms.</p>
+            <ul class="product-card__tags"><li>Dye-Inter</li><li>Pure</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Naphol%20Salts">Request documentation</a>
+          </article>
+
+          <article class="product-card product-card--chem" data-division="chem" data-category="specialty" data-subcategory="pigment" data-search="fast black b base fast red itr base color" data-cas="TBA" data-formula="TBA" data-purity=">= 99%" data-appearance="Standard" data-storage="Room Temp" data-compliance="Standard Grade">
+            <span class="product-card__kind">Chemical</span>
+            <span class="product-card__pill product-card__pill--chem">Pigment</span>
+            <h3 class="product-card__title">Fast Bases (Black B / Red ITR)</h3>
+            <p class="product-card__desc">Premium fast color bases for textile dyeing and pigment manufacturing.</p>
+            <ul class="product-card__tags"><li>Textile</li><li>Color</li></ul>
+            <a class="product-card__cta" href="mailto:info@kshiprapharmachem.in?subject=Enquiry%3A%20Fast%20Bases">Request documentation</a>
           </article>
         </div>
 
@@ -204,7 +316,7 @@
       </section>
 
       <section class="container reveal">
-        <div class="cta-banner" style="margin-bottom: 4rem;">
+        <div class="cta-banner" style="margin-top: 8rem; margin-bottom: 6rem;">
           <h2>Need a product not listed?</h2>
           <p>Send specifications, pharmacopoeia reference, or CAS — we coordinate technical matching and documentation.</p>
           <a class="btn btn-primary" href="mailto:info@kshiprapharmachem.in?subject=Custom%20product%20enquiry">Email info@kshiprapharmachem.in</a>
@@ -267,8 +379,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/products.js"></script>
 
     <!-- Product Modal -->
     <div class="modal-overlay" id="product-modal">
@@ -281,22 +391,30 @@
           <h3 id="modal-title">Product Name</h3>
           <p id="modal-desc" style="color: var(--text-muted);">Product description goes here.</p>
         </div>
-        <div class="modal-stats">
+        <div class="modal-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
           <div class="modal-stat-item">
             <span>CAS Number</span>
-            <strong id="modal-cas">123-45-6</strong>
+            <strong id="modal-cas">N/A</strong>
           </div>
           <div class="modal-stat-item">
             <span>Formula</span>
-            <strong id="modal-formula">C8H9NO2</strong>
+            <strong id="modal-formula">N/A</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Purity/Grade</span>
+            <strong id="modal-purity">N/A</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Appearance</span>
+            <strong id="modal-appearance">N/A</strong>
+          </div>
+          <div class="modal-stat-item">
+            <span>Storage</span>
+            <strong id="modal-storage">N/A</strong>
           </div>
           <div class="modal-stat-item">
             <span>Compliance</span>
-            <strong id="modal-compliance">USP/EP</strong>
-          </div>
-          <div class="modal-stat-item">
-            <span>Availability</span>
-            <strong id="modal-availability">Commercial Bulk</strong>
+            <strong id="modal-compliance">N/A</strong>
           </div>
         </div>
         <form class="modal-form" id="modal-enquiry-form">
@@ -307,5 +425,29 @@
         </form>
       </div>
     </div>
+
+    <!-- Subcategory Drawer -->
+    <div class="drawer-overlay" id="subcat-overlay"></div>
+    <aside class="subcat-drawer" id="subcat-drawer">
+      <div class="subcat-drawer__header">
+        <h3>Sub-Categories</h3>
+        <button type="button" class="subcat-drawer__close" id="subcat-close" aria-label="Close drawer">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="subcat-drawer__content">
+        <form id="subcat-form">
+          <div class="subcat-list" id="subcat-list">
+            <!-- Dynamic checkboxes will go here -->
+          </div>
+          <button type="button" class="btn btn-ghost" id="subcat-clear" style="margin-top: 1.5rem; width: 100%;">Clear Filters</button>
+        </form>
+      </div>
+    </aside>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
   </body>
 </html>
+
+
+
