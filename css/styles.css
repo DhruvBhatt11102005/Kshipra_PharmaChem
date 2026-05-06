@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-link img {
-  height: 40px;
+  height: 55px;
   width: auto;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
   transition: var(--transition);
@@ -982,12 +982,12 @@ h2 {
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(145deg, #004282 0%, #002d5a 100%);
+  background: linear-gradient(180deg, #050b14 0%, #020408 100%);
   padding: 80px 0 40px;
   position: relative;
   z-index: 10;
   color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 210, 255, 0.2);
   overflow: hidden;
 }
 
@@ -1018,13 +1018,14 @@ h2 {
 
 .footer-logo-box {
   background: #fff;
-  padding: 2rem;
-  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  border-radius: 24px;
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logo-box img {
