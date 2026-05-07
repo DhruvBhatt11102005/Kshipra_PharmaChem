@@ -32,6 +32,7 @@
       { id: "analgesic", label: "Analgesic" },
       { id: "gastrointestinal", label: "Gastrointestinal" },
       { id: "antibiotic-intermediate", label: "Antibiotic Intermediates" },
+      { id: "synthesis-intermediate", label: "Synthesis Intermediates" },
       { id: "binder-coating", label: "Binders & Coatings" },
       { id: "diluent", label: "Diluents" },
       { id: "herbal-extract", label: "Herbal Extracts" },
