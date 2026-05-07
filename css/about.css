@@ -109,7 +109,10 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3.5rem;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(10, 20, 30, 0.6) 100%);
   backdrop-filter: blur(4px);
   height: 100%;
@@ -117,8 +120,9 @@
 
 .ab-vm-item {
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
   animation: abFloat 6s ease-in-out infinite;
 }
 
