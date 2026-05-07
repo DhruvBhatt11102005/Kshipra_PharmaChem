@@ -468,69 +468,134 @@
 
 /* ── CERTIFICATES ── */
 .ab-certs {
-  padding: 60px 0 100px;
+  padding: 80px 0 100px;
   border-top: 1px solid var(--border-light);
+}
+
+.ab-certs__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ab-certs__lead {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* 3-column grid */
+.ab-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ab-cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  transition: transform 0.45s cubic-bezier(0.2, 1, 0.2, 1),
+              box-shadow 0.45s ease,
+              border-color 0.45s ease;
 }
 
-.ab-cert-row {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 4rem;
-  align-items: center;
+.ab-cert-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 210, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55),
+              0 0 30px rgba(0, 210, 255, 0.12);
 }
 
-.ab-cert-img-wrap {
-  border-radius: 16px;
+/* Image section */
+.ab-cert-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 1px solid var(--border-light);
   background: rgba(255,255,255,0.04);
-  aspect-ratio: 3/4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
 }
 
-.ab-cert-img-wrap:hover {
-  border-color: rgba(0, 210, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.ab-cert-img-wrap img {
+.ab-cert-card__img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.6s ease;
 }
 
-.ab-cert-img-placeholder {
+.ab-cert-card:hover .ab-cert-card__img-wrap img {
+  transform: scale(1.06);
+}
+
+.ab-cert-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 2rem;
-  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
-.ab-cert-img-placeholder span {
-  font-family: var(--font-heading);
+/* Overlay badge on image */
+.ab-cert-card__img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.ab-cert-badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
   font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  color: var(--primary);
+  backdrop-filter: blur(6px);
 }
 
-.ab-cert-row__text-col h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  margin-bottom: 1.25rem;
+.ab-cert-badge--chem {
+  background: rgba(0, 255, 135, 0.12);
+  border-color: rgba(0, 255, 135, 0.35);
+  color: var(--accent-chem);
 }
 
-.ab-cert-row__text-col p {
+/* Text body */
+.ab-cert-card__body {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-cert-card__body h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.ab-cert-card__body p {
   color: var(--text-muted);
-  font-size: 0.97rem;
-  line-height: 1.85;
+  font-size: 0.88rem;
+  line-height: 1.75;
 }
 
 /* ── RESPONSIVE ── */
@@ -544,9 +609,8 @@
     grid-template-columns: 260px 1fr;
     gap: 2.5rem;
   }
-  .ab-cert-row {
-    grid-template-columns: 220px 1fr;
-    gap: 2.5rem;
+  .ab-cert-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -560,13 +624,8 @@
     max-width: 280px;
     margin: 0 auto;
   }
-  .ab-cert-row {
+  .ab-cert-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .ab-cert-img-wrap {
-    max-width: 260px;
-    margin: 0 auto;
   }
   .ab-stats__grid {
     grid-template-columns: 1fr;
