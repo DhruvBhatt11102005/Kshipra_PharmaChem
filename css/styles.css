@@ -1168,7 +1168,7 @@ h2 {
 }
 
 .footer-bottom-nav a:hover {
-  color: #fff;
+  color: var(--primary);
 }
 
 .footer-copy {
